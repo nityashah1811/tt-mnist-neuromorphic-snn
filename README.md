@@ -10,6 +10,8 @@ A **spiking neural network** in silicon for [Tiny Tapeout](https://tinytapeout.c
 
 ![Layout](gds/layout.png)
 
+![What the chip sees](docs/img/gallery.svg)
+
 | | |
 |---|---|
 | Size | 1x1 tile |
@@ -43,7 +45,7 @@ Both viewers below open the real GDS from this repo in your browser. Nothing to 
 <table>
 <tr>
 <td width="50%" align="center">
-<a href="https://znah.net/tiny_explorer/viewer.html?file=https%3A%2F%2Fraw.githubusercontent.com%2Fnityashah1811%2Ftt-mnist-neuromorphic-snn%2Fmain%2Fgds%2Ftt_um_nityashah1811_snn_mnist.gds&pdk=sky130A"><img src="gds/layout.png" alt="The design in Tiny Explorer"></a>
+<a href="https://znah.net/tiny_explorer/viewer.html?file=https%3A%2F%2Fraw.githubusercontent.com%2Fnityashah1811%2Ftt-mnist-neuromorphic-snn%2Fmain%2Fgds%2Ftt_um_nityashah1811_snn_mnist.gds&pdk=sky130A"><img src="docs/img/tiny_explorer.png" alt="The design in Tiny Explorer"></a>
 <br>
 <b><a href="https://znah.net/tiny_explorer/viewer.html?file=https%3A%2F%2Fraw.githubusercontent.com%2Fnityashah1811%2Ftt-mnist-neuromorphic-snn%2Fmain%2Fgds%2Ftt_um_nityashah1811_snn_mnist.gds&pdk=sky130A">Open in Tiny Explorer</a></b>
 <br>
@@ -59,10 +61,10 @@ Hide fill cells, isolate standard cells, and slice through the layer stack.
 </tr>
 </table>
 
-<p align="center" hidden>
-<a href="https://znah.net/tiny_explorer/viewer.html?file=https%3A%2F%2Fraw.githubusercontent.com%2Fnityashah1811%2Ftt-mnist-neuromorphic-snn%2Fmain%2Fgds%2Ftt_um_nityashah1811_snn_mnist.gds&pdk=sky130A"><img src="docs/img/tiny_explorer_3d.png" alt="The design in 3D in Tiny Explorer" width="90%"></a>
+<p align="center">
+<img src="docs/img/layout_detail.png" alt="Close-up of the standard cells" width="90%">
 <br>
-<em>The routed design tilted into 3D in Tiny Explorer.</em>
+<em>Close-up of the routed tile: rows of sky130 standard cells (flip-flops, adders and the weight logic) with the metal routing above them.</em>
 </p>
 
 | Viewer | Controls |
@@ -108,7 +110,21 @@ The figure above is real data: test image 0 (a 7) run through the exact integer 
 
 The input is the central 24×24 pixels of the 28×28 MNIST image, averaged over 3×3 blocks and quantised to 4 levels. The host does this preprocessing.
 
+### What the neurons learned
+
+![The 640 weights](docs/img/weights.svg)
+
+Training gave every output neuron an 8×8 template of its digit. Blue pixels are excitatory (+1), orange are inhibitory (−1). You can read the shapes straight off the silicon's lookup table: a ring for 0, a vertical bar for 1, and for 7 a top stroke and a diagonal.
+
+### Inside a decision
+
+![Membrane voltages](docs/img/membrane.svg)
+
+While the chip reads a 7, neuron 7's membrane climbs past the threshold again and again, firing 9 times. Neuron 9 shares some strokes with a 7 and fires 4 times. Neuron 6 sees mostly inhibitory pixels and sinks below zero, where the leak slowly pulls it back.
+
 ### Accuracy by digit
+
+![Accuracy by digit](docs/img/accuracy.svg)
 
 | Digit | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
@@ -116,9 +132,13 @@ The input is the central 24×24 pixels of the 28×28 MNIST image, averaged over 
 
 The most common mistakes are 5 → 3, 4 ↔ 9, 7 → 9 and 8 → 3. That's what you'd expect from a single layer looking at an 8×8, 2-bit image: those digits differ in small strokes that the downsampling blurs together.
 
+![Confusion matrix](docs/img/confusion.svg)
+
 ### Why this network?
 
 The chip had to fit **one tile**. Neuron state costs flip-flops, which dominate area, so the design drops the hidden layer and keeps only the 10 output neurons. A sweep (in [`model/`](model/)) shows the trade:
+
+![Accuracy vs size](docs/img/sweep.svg)
 
 | Network | Weights | Neuron state bits | Test accuracy | Result |
 |---|---:|---:|---:|---|
@@ -235,6 +255,8 @@ With a microcontroller bit-banging the pins, the host is the bottleneck, not the
 All `uio` pins are inputs (`uio_oe = 0`). `STROBE` and `CLEAR` pass through 2-flop synchronisers with edge detection, so the host can be a slow microcontroller on its own clock. Hold each strobe level for at least 4 clocks, and keep `ui` steady while `STROBE` is high.
 
 ## Talking to the chip
+
+![Byte handshake](docs/img/protocol.svg)
 
 ```mermaid
 sequenceDiagram
@@ -417,6 +439,7 @@ python export.py --ckpt ckpt_8x8_h0_v8_e30.pt --hidden 0 --theta 8 --leak 4 --vb
 mv snn_weights.h cpp/
 python gen_weights.py                 # regenerates ../src/snn_weights.v
 python make_figures.py                # regenerates ../docs/img/spikes.svg
+cd .. && python docs/make_readme_figures.py   # weights, accuracy, confusion, membrane, gallery, sweep, protocol figures
 ```
 
 **Harden to GDS:** push to GitHub. The `gds` action builds the layout, runs the precheck and the gate-level tests, and publishes the viewer.

@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 400" width="1000" height="400" role="img" aria-label="Accuracy by digit, all 10,000 MNIST test images">
+<title>Accuracy by digit, all 10,000 MNIST test images</title>
+<rect width="1000" height="400" rx="12" fill="#0d1117"/>
+<text x="30" y="36" font-size="16" fill="#e6edf3" text-anchor="start" font-weight="600" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">Accuracy by digit, all 10,000 MNIST test images</text>
+<text x="30" y="57" font-size="12.5" fill="#8b949e" text-anchor="start" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">Share of each digit's test images the chip classifies correctly (bit-exact chip model).</text>
+<line x1="54" y1="330.0" x2="884" y2="330.0" stroke="#30363d"/>
+<text x="48" y="334.0" font-size="11" fill="#8b949e" text-anchor="end" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">0%</text>
+<line x1="54" y1="270.0" x2="884" y2="270.0" stroke="#30363d"/>
+<text x="48" y="274.0" font-size="11" fill="#8b949e" text-anchor="end" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">25%</text>
+<line x1="54" y1="210.0" x2="884" y2="210.0" stroke="#30363d"/>
+<text x="48" y="214.0" font-size="11" fill="#8b949e" text-anchor="end" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">50%</text>
+<line x1="54" y1="150.0" x2="884" y2="150.0" stroke="#30363d"/>
+<text x="48" y="154.0" font-size="11" fill="#8b949e" text-anchor="end" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">75%</text>
+<line x1="54" y1="90.0" x2="884" y2="90.0" stroke="#30363d"/>
+<text x="48" y="94.0" font-size="11" fill="#8b949e" text-anchor="end" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">100%</text>
+<line x1="54" y1="139.8" x2="884" y2="139.8" stroke="#8b949e" stroke-dasharray="5 4"/>
+<text x="890" y="143.776" font-size="11.5" fill="#c9d1d9" text-anchor="start" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">overall 79.26%</text>
+<path d="M82.0 330v-221.6a4 4 0 0 1 4 -4h38a4 4 0 0 1 4 4v221.6z" fill="#3987e5"/>
+<text x="105.0" y="96.44897959183672" font-size="12" fill="#e6edf3" text-anchor="middle" font-weight="400" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">94.0%</text>
+<text x="105.0" y="352" font-size="15" fill="#e6edf3" text-anchor="middle" font-weight="600" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">0</text>
+<text x="105.0" y="370" font-size="10.5" fill="#8b949e" text-anchor="middle" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">n=980</text>
+<path d="M164.0 330v-219.7a4 4 0 0 1 4 -4h38a4 4 0 0 1 4 4v219.7z" fill="#3987e5"/>
+<text x="187.0" y="98.2819383259912" font-size="12" fill="#e6edf3" text-anchor="middle" font-weight="400" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">93.2%</text>
+<text x="187.0" y="352" font-size="15" fill="#e6edf3" text-anchor="middle" font-weight="600" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">1</text>
+<text x="187.0" y="370" font-size="10.5" fill="#8b949e" text-anchor="middle" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">n=1135</text>
+<path d="M246.0 330v-176.7a4 4 0 0 1 4 -4h38a4 4 0 0 1 4 4v176.7z" fill="#3987e5"/>
+<text x="269.0" y="141.30232558139534" font-size="12" fill="#e6edf3" text-anchor="middle" font-weight="400" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">75.3%</text>
+<text x="269.0" y="352" font-size="15" fill="#e6edf3" text-anchor="middle" font-weight="600" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">2</text>
+<text x="269.0" y="370" font-size="10.5" fill="#8b949e" text-anchor="middle" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">n=1032</text>
+<path d="M328.0 330v-200.8a4 4 0 0 1 4 -4h38a4 4 0 0 1 4 4v200.8z" fill="#3987e5"/>
+<text x="351.0" y="117.1683168316832" font-size="12" fill="#e6edf3" text-anchor="middle" font-weight="400" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">85.3%</text>
+<text x="351.0" y="352" font-size="15" fill="#e6edf3" text-anchor="middle" font-weight="600" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">3</text>
+<text x="351.0" y="370" font-size="10.5" fill="#8b949e" text-anchor="middle" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">n=1010</text>
+<path d="M410.0 330v-189.6a4 4 0 0 1 4 -4h38a4 4 0 0 1 4 4v189.6z" fill="#3987e5"/>
+<text x="433.0" y="128.4358452138493" font-size="12" fill="#e6edf3" text-anchor="middle" font-weight="400" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">80.7%</text>
+<text x="433.0" y="352" font-size="15" fill="#e6edf3" text-anchor="middle" font-weight="600" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">4</text>
+<text x="433.0" y="370" font-size="10.5" fill="#8b949e" text-anchor="middle" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">n=982</text>
+<path d="M492.0 330v-120.3a4 4 0 0 1 4 -4h38a4 4 0 0 1 4 4v120.3z" fill="#3987e5"/>
+<text x="515.0" y="197.695067264574" font-size="12" fill="#e6edf3" text-anchor="middle" font-weight="400" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">51.8%</text>
+<text x="515.0" y="352" font-size="15" fill="#e6edf3" text-anchor="middle" font-weight="600" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">5</text>
+<text x="515.0" y="370" font-size="10.5" fill="#8b949e" text-anchor="middle" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">n=892</text>
+<path d="M574.0 330v-206.4a4 4 0 0 1 4 -4h38a4 4 0 0 1 4 4v206.4z" fill="#3987e5"/>
+<text x="597.0" y="111.56158663883093" font-size="12" fill="#e6edf3" text-anchor="middle" font-weight="400" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">87.7%</text>
+<text x="597.0" y="352" font-size="15" fill="#e6edf3" text-anchor="middle" font-weight="600" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">6</text>
+<text x="597.0" y="370" font-size="10.5" fill="#8b949e" text-anchor="middle" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">n=958</text>
+<path d="M656.0 330v-178.8a4 4 0 0 1 4 -4h38a4 4 0 0 1 4 4v178.8z" fill="#3987e5"/>
+<text x="679.0" y="139.19844357976655" font-size="12" fill="#e6edf3" text-anchor="middle" font-weight="400" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">76.2%</text>
+<text x="679.0" y="352" font-size="15" fill="#e6edf3" text-anchor="middle" font-weight="600" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">7</text>
+<text x="679.0" y="370" font-size="10.5" fill="#8b949e" text-anchor="middle" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">n=1028</text>
+<path d="M738.0 330v-155.9a4 4 0 0 1 4 -4h38a4 4 0 0 1 4 4v155.9z" fill="#3987e5"/>
+<text x="761.0" y="162.08213552361397" font-size="12" fill="#e6edf3" text-anchor="middle" font-weight="400" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">66.6%</text>
+<text x="761.0" y="352" font-size="15" fill="#e6edf3" text-anchor="middle" font-weight="600" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">8</text>
+<text x="761.0" y="370" font-size="10.5" fill="#8b949e" text-anchor="middle" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">n=974</text>
+<path d="M820.0 330v-182.0a4 4 0 0 1 4 -4h38a4 4 0 0 1 4 4v182.0z" fill="#3987e5"/>
+<text x="843.0" y="135.994053518335" font-size="12" fill="#e6edf3" text-anchor="middle" font-weight="400" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">77.5%</text>
+<text x="843.0" y="352" font-size="15" fill="#e6edf3" text-anchor="middle" font-weight="600" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">9</text>
+<text x="843.0" y="370" font-size="10.5" fill="#8b949e" text-anchor="middle" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">n=1009</text>
+</svg>
