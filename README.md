@@ -6,7 +6,7 @@
 
 A **spiking neural network** in silicon for [Tiny Tapeout](https://tinytapeout.com) (sky130), in a single 1x1 tile. It classifies handwritten MNIST digits with 64 input spikes, 10 leaky integrate-and-fire neurons and 640 hardwired ternary weights.
 
-**Author:** Nitya Shah
+**Author:** Nitya Shah, Nimay Shah
 
 ![Layout](gds/layout.png)
 
